@@ -1,0 +1,61 @@
+{
+    "header": 
+        [
+            {"item":
+                {
+                    "heading": "About", 
+                    "link": "",
+                    "sectionContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo urna, eleifend sit amet metus ut, maximus scelerisque metus. Aenean hendrerit finibus tincidunt. Maecenas in velit eros. Cras aliquet libero eget arcu imperdiet finibus. Vivamus leo nulla, scelerisque at pellentesque quis, semper sit amet nibh. Phasellus id ex vestibulum sapien dictum ornare. Vivamus auctor, ante vitae pellentesque maximus, arcu leo tincidunt ante, quis lacinia est odio a turpis. Quisque vel ipsum augue. Quisque ac tristique ipsum, sed suscipit neque. Duis a orci tortor. Pellentesque tempor sem sed vulputate ornare. Fusce condimentum quam gravida semper placerat. Etiam enim magna, eleifend sit amet massa ut, venenatis eleifend lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum quam leo, vitae viverra quam dignissim a. Nunc tincidunt lorem nec mauris pulvinar, ac tempus nibh rutrum. In ac varius elit. In ligula mauris, vehicula a pharetra sed, interdum at leo. Vestibulum non eros at risus porta vestibulum. Morbi in lobortis eros. In hac habitasse platea dictumst. Vivamus ante elit, tincidunt sit amet finibus in, viverra id massa. Duis varius, sapien et posuere congue, ipsum mi tempor mi, ut vestibulum eros eros at justo. Aliquam convallis, enim a lobortis efficitur, elit erat vestibulum urna, ut consequat elit orci sed libero. Nullam ut ultricies nisl.",
+                    "photoPath": "individual.jpg",
+                    "photoAlt": "Individual Photo"
+                }
+            },
+            {"item":
+                {
+                    "heading": "Experience", 
+                    "link": "",
+                    "sectionContent": [
+                        {
+                            "job":
+                            {   
+                                "company": "WestRock",
+                                "jobTitle": "Technology Intern",
+                                "start": "May 2021",
+                                "end": "Present",
+                                "description": "Short description",
+                                "bullets": ["Tax work","more tax work"]
+                            }
+                        },
+                        {
+                            "job":
+                            {   
+                                "company": "South Tampa Family YMCA",
+                                "jobTitle": "Summer Camp Counselor",
+                                "start": "April 2018",
+                                "end": "August 2020",
+                                "description": "Short description",
+                                "bullets": ["Camp","more camp work"]
+                            }
+                        }
+                    ]
+                }
+            },
+            {"item":
+                {"heading": "Projects", "link": ""}
+            },
+            {"item":
+                {
+                    "heading": "Contact", 
+                    "link": "",
+                    "email": "ryan.warner@gatech.edu",
+                    "phone": "813-613-4828",
+                    "address": "120 North Ave, Atlanta, GA 30332"
+                }
+            }
+        ],
+    "intro":
+        {
+            "primaryIntro": "Hi, my name is Ryan Warner!",
+            "secondaryIntro": "I'm an Aerospace Engineering student at the Georgia Institute of Technology. I'm interested in creating aerospace systems to improve the lives of people around the world."
+        }
+}
