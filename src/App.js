@@ -7,12 +7,15 @@ import SectionHeader from './SectionHeader';
 import About from './About';
 import Experience from './Experience';
 import Projects from './Projects';
+import ProjectCarousel from './ProjectCarousel';
 import Contact from './Contact';
+import Footer from './Footer';
 //import ReactDOM from 'react-dom/client';
 
 function App() {
   const headerContent = content.header;
   const introContent = content.intro;
+  const footerContent = content.footer.links;
 
   const contentArr = [];
   var counter = 0
@@ -27,31 +30,34 @@ function App() {
           sectionContent = <Experience content={element.item} key={counter+=1}/>;
           break
         case "Projects":
-          sectionContent = <Projects sectionContent={element.item.heading} key={counter+=1}/>;
+          sectionContent = <div><Projects content={element.item} key={counter+=1}/><ProjectCarousel content={element.item}/></div>;
           break
         case "Contact":
-          sectionContent = <Contact sectionContent={element.item.heading} key={counter+=1}/>;
+          sectionContent = <Contact content={element.item} key={counter+=1}/>;
           break
         default: 
-          <div></div>
+          sectionContent = null
     }
 
     // Text Color must be alongside opacity for proper functionality
-    contentArr.push(
-      <div className="w-full flex flex-col divide-y-2" key={counter}>
-        <SectionHeader sectionHeading={element.item.heading} key={counter+1} />
-        {sectionContent}
-      </div>
-    )
+    if (sectionContent != null) {
+      contentArr.push(
+        <div className="w-full flex flex-col divide-y-2" key={counter}>
+          <SectionHeader sectionHeading={element.item.heading} key={counter+1} />
+          {sectionContent}
+        </div>
+      )
+    }
   });
 
   return (
     <div className="h-screen w-full">
       <Header headerItems={headerContent}/>
       <Background introContent={introContent}/>
-      <div className="p-8 w-full">
+      <div className="pt-8 px-24 w-full">
         {contentArr}
       </div>
+      <Footer footerContent={footerContent}/>
     </div>
   );
 }

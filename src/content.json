@@ -18,35 +18,105 @@
                         {
                             "job":
                             {   
-                                "company": "WestRock",
+                                "company": "The WestRock Corporation",
+                                "location": "Atlanta, GA",
                                 "jobTitle": "Technology Intern",
                                 "start": "May 2021",
                                 "end": "Present",
                                 "description": "Short description",
-                                "bullets": ["Tax work","more tax work"]
+                                "bullets": ["Tax work","more tax work"],
+                                "imagePath": "wrkLogo.png"
                             }
                         },
                         {
                             "job":
                             {   
-                                "company": "South Tampa Family YMCA",
+                                "company": "Tampa Metropolitan Area YMCA",
+                                "location": "Tampa, FL",
                                 "jobTitle": "Summer Camp Counselor",
                                 "start": "April 2018",
                                 "end": "August 2020",
                                 "description": "Short description",
-                                "bullets": ["Camp","more camp work"]
+                                "bullets": ["Camp","more camp work"],
+                                "imagePath": "yLogo.png"
                             }
                         }
                     ]
                 }
             },
             {"item":
-                {"heading": "Projects", "link": ""}
+                {
+                    "heading": "Projects",
+                    "link": "",
+                    "sectionContent": [
+                        {
+                            "project": {
+                                "name": "Project 1",
+                                "shortDescription": "Short description",
+                                "longDescription": "Longer description",
+                                "images": ["individual.jpg", "urbanKaiLogo.png","yLogo.png"],
+                                "tags": ["soldering", "CAD", "etc"],
+                                "link": "if applicable"
+                            }
+                        },
+                        {
+                            "project": {
+                                "name": "Project 2",
+                                "shortDescription": "Short description",
+                                "longDescription": "Longer description",
+                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
+                                "tags": ["soldering", "CAD", "etc"],
+                                "link": "if applicable"
+                            }
+                        },
+                        {
+                            "project": {
+                                "name": "Project 3",
+                                "shortDescription": "Short description",
+                                "longDescription": "Longer description",
+                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
+                                "tags": ["soldering", "CAD", "etc"],
+                                "link": "if applicable"
+                            }
+                        },
+                        {
+                            "project": {
+                                "name": "Project 4",
+                                "shortDescription": "Short description",
+                                "longDescription": "Longer description",
+                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
+                                "tags": ["soldering", "CAD", "etc"],
+                                "link": "if applicable"
+                            }
+                        },
+                        {
+                            "project": {
+                                "name": "Project 5",
+                                "shortDescription": "Short description",
+                                "longDescription": "Longer description",
+                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
+                                "tags": ["soldering", "CAD", "etc"],
+                                "link": "if applicable"
+                            }
+                        },
+                        {
+                            "project": {
+                                "name": "Project 6",
+                                "shortDescription": "Short description",
+                                "longDescription": "Longer description",
+                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
+                                "tags": ["soldering", "CAD", "etc"],
+                                "link": "if applicable"
+                            }
+                        }
+                    ]
+                }
             },
             {"item":
                 {
                     "heading": "Contact", 
                     "link": "",
+                    "name": "Ryan Joseph Warner",
                     "email": "ryan.warner@gatech.edu",
                     "phone": "813-613-4828",
                     "address": "120 North Ave, Atlanta, GA 30332"
@@ -57,5 +127,35 @@
         {
             "primaryIntro": "Hi, my name is Ryan Warner!",
             "secondaryIntro": "I'm an Aerospace Engineering student at the Georgia Institute of Technology. I'm interested in creating aerospace systems to improve the lives of people around the world."
+        },
+    "footer":
+        {
+            "links": [
+                {
+                    "item": {
+                        "linkTo": "Github",
+                        "url": "https://github.com/ryan-warner/"
+                    }
+                },
+                {
+                    "item": {
+                        "linkTo": "Twitter",
+                        "url": "https://twitter.com/ryanw_arner"
+                    }
+                },
+                {
+                    "item": {
+                        "linkTo": "Instagram",
+                        "url": "https://www.instagram.com/ryanw.arner/"
+                    }
+                },
+                {
+                    "item": {
+                        "linkTo": "LinkedIn",
+                        "url": "https://www.linkedin.com/in/warner-ryan/"
+                    }
+                }
+            ]
+            
         }
 }
