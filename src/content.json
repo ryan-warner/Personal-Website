@@ -23,9 +23,31 @@
                                 "jobTitle": "Technology Intern",
                                 "start": "May 2021",
                                 "end": "Present",
-                                "description": "Short description",
-                                "bullets": ["Tax work","more tax work"],
+                                "description": "Working alongside the WestRock Corporate Tax team to develop internal tools to smooth the tax process. Tools are built with the Microsoft Power Platform, primarily utilizing PowerApps as a front-end interface, PowerAutomate for data processing, and Microsoft Dataverse as a back-end.",
+                                "bullets": 
+                                    [
+                                        "Developed a system to streamline department-wide task management and create a centralized tax workflow at a savings of $250,000 from an external vendor",
+                                        "Building and implementing custom connectors to access and modify data from external tools such as Thomson Reuters ONESOURCE and Alteryx",
+                                        "Continuing to develop and implement systems to process department-scale data to aid and inform executive decision making"
+                                    ],
                                 "imagePath": "wrkLogo.png"
+                            }
+                        },
+                        {
+                            "job":
+                            {   
+                                "company": "Urban Kai",
+                                "location": "Tampa, FL",
+                                "jobTitle": "Retail Sales Manager",
+                                "start": "November 2020",
+                                "end": "January 2021",
+                                "description": "Worked at a local outfitter selling outdoor clothing and equipment. Located on the Hillsborough River near Armature Works, this location had access to a slip from which kayak and paddleboard rentals were launched. I was responsible for managing both sales and rentals throughout the course of the day, helping customers find what they were looking for, while making sure that our rental customers were safe out on the water.",
+                                "bullets": 
+                                    [
+                                        "Developed an internal inventory management system to validate POS data and centralize the inventory process between two retail locations, leading to a five-fold increase in process speed",
+                                        "Created and implemented a novel rental onboarding process, minimizing customer-employee touchpoints and increasing overall process speed by a factor of three"
+                                    ],
+                                "imagePath": "urbanKaiLogo.png"
                             }
                         },
                         {
@@ -34,10 +56,27 @@
                                 "company": "Tampa Metropolitan Area YMCA",
                                 "location": "Tampa, FL",
                                 "jobTitle": "Summer Camp Counselor",
-                                "start": "April 2018",
+                                "start": "May 2019",
                                 "end": "August 2020",
-                                "description": "Short description",
-                                "bullets": ["Camp","more camp work"],
+                                "description": "Spent two summers working as a camp counselor while in high school. Day-to-day responsibilities varied; however, I was typically in charge of check-in and check-out in the hours before programming started and would remain with a group through programming",
+                                "bullets": 
+                                    [
+                                        "In charge of basketball camp in 2020, along with one of my co-workers, during which we were responsible for planning drills, officiating scrimmages, in addition to other general camp activities.", 
+                                        "Was nicknamed \"The Governor\" by a parent in appreciation of my enthusiasm at check-in early in the morning"
+                                    ],
+                                "imagePath": "yLogo.png"
+                            }
+                        },
+                        {
+                            "job":
+                            {   
+                                "company": "Tampa Metropolitan Area YMCA",
+                                "location": "Tampa, FL",
+                                "jobTitle": "Youth Sports Official",
+                                "start": "March 2018",
+                                "end": "August 2020",
+                                "description": "Worked as a sports official from the age of 16 until leaving for college. Was responsible for officiating recreational soccer games for leagues ranging from ages 3-5 all the way to ages 12-14. Worked to ensure fair and safe play, while simultaneously responding to the demands of coaches and parents. Managed and maintained the fields on-site.",
+                                "bullets": [],
                                 "imagePath": "yLogo.png"
                             }
                         }
@@ -51,7 +90,7 @@
                     "sectionContent": [
                         {
                             "project": {
-                                "name": "Project 1",
+                                "name": "1995 Ford Bronco",
                                 "shortDescription": "Short description",
                                 "longDescription": "Longer description",
                                 "images": ["individual.jpg", "urbanKaiLogo.png","yLogo.png"],
