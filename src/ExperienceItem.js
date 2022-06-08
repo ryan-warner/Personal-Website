@@ -4,7 +4,7 @@ function ExperienceItem(props) {
     var counter = 0
     props.job.bullets.forEach(element => {
         // Text Color must be alongside opacity for proper functionality
-        jobBullets.push(<li key={counter+=1}>{" " + element}</li>)
+        jobBullets.push(<li key={counter+=1}><p className="my-0">{" " + element}</p></li>)
     });
     
     return (
@@ -16,7 +16,7 @@ function ExperienceItem(props) {
                 <p className="text-xl font-semibold">{props.job.jobTitle + " (" + props.job.start + " - " + props.job.end + ")"}</p>
                 <p className="text-lg font-light min-w-fit w-min">{props.job.company + " - " + props.job.location}</p>
                 <p className="pt-1 text-lg">{props.job.description}</p>
-                <ul className="list-disc pt-1 text-lg pl-12">{jobBullets}</ul>
+                <ul className="list-disc pt-1 text-lg pl-12 prose text-black">{jobBullets}</ul>
             </div>
         </div>
     );

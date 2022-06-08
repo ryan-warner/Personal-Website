@@ -65,7 +65,7 @@
                                 "shortDescription": "Short description",
                                 "longDescription": "Longer description",
                                 "images": ["individual.jpg", "image2.jpg","image3.jpg"],
-                                "tags": ["soldering", "CAD", "etc"],
+                                "tags": ["soldering", "CAD", "Stuff"],
                                 "link": "if applicable"
                             }
                         },

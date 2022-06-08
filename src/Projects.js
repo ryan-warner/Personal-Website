@@ -23,19 +23,14 @@ function Projects(props) {
   var counter = 0
   props.content.sectionContent.forEach(element => {
     counter+=1;
-    projectItems.push(<ProjectItem project={element.project} key={counter} onClick={() => handleExpand(element.project.name, element.project)} expanded={expanded.name === element.project.name ? true : false} />)
+    projectItems.push(<ExpandedProjectItem project={element.project} key={counter} even={(counter + 1) % 2 === 0} />)
   });
   return (
-    //<div>
     <div className="w-full h-auto flex justify-center">
-      {expandedItem === null ? 
-        <div className="w-full h-full py-8 gap-8 grid grid-cols-3">
-          {projectItems}
-        </div> :
-        <ExpandedProjectItem project={expandedItem} />
-      }
+      <div className="w-full h-full py-8 gap-10 flex flex-col">
+        {projectItems}
+      </div>
     </div>
-    //</div>
   );
 }
   

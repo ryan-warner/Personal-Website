@@ -36,8 +36,8 @@ function ExpandedProjectItem(props) {
     });
     
     return (
-        <div className="relative w-full h-72 overflow-hidden flex align-top">
-            <div className="relative group h-full w-2/3 overflow-hidden rounded-xl">
+        <div className="relative w-full h-72 overflow-hidden flex align-top bg-gray-300 rounded-lg p-4">
+            <div className={"relative group h-full w-2/3 overflow-hidden rounded-xl" + (props.even ? " order-1" : " order-2")}>
                 <img className="object-cover h-full w-full absolute inset-0 object-center select-none" src={require("./images/" + focusedImage)}></img>
                 <div className="absolute left-0 flex flex-col justify-center h-full w-min">
                     <ChevronLeftIcon onClick={() => getLastImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-25 hover:opacity-90 stroke-white"/>
@@ -46,7 +46,7 @@ function ExpandedProjectItem(props) {
                     <ChevronRightIcon onClick={() => getNextImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-25 hover:opacity-90 stroke-white"/>
                 </div>
             </div>
-            <div className="w-full h-full px-4 flex flex-col flex-grow">
+            <div className={"w-full h-full px-4 flex flex-col flex-grow" + (props.even ? " order-2" : " order-1")}>
                 <p className="font-semibold text-2xl">{props.project.name}</p>
                 <p className="text-lg">{props.project.longDescription}</p>
                 <div className="flex mt-4 gap-2">{tagItems}</div>
