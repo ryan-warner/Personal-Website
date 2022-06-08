@@ -16,7 +16,7 @@ function ProjectCarousel(props) {
     <div className="flex flex-col w-full gap-4">
         <ExpandedProjectItem project={selectedProject} />
         <div className="flex">
-        <div className="snap-x snap-mandatory flex overflow-x-auto w-1/5 flex-grow gap-4">
+        <div className="snap-x snap-mandatory flex overflow-x-auto w-1/5 flex-grow gap-4 h-full">
             {carouselItems}
         </div>
         <button>View All Projects</button>
