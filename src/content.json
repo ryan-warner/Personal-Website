@@ -121,6 +121,12 @@
                     "phone": "813-613-4828",
                     "address": "120 North Ave, Atlanta, GA 30332"
                 }
+            },
+            {"item":
+                {
+                    "heading": "Resume", 
+                    "filePath": ""
+                }
             }
         ],
     "intro":
