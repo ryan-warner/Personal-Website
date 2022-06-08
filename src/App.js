@@ -7,7 +7,6 @@ import SectionHeader from './SectionHeader';
 import About from './About';
 import Experience from './Experience';
 import Projects from './Projects';
-import ProjectCarousel from './ProjectCarousel';
 import Contact from './Contact';
 import Footer from './Footer';
 //import ReactDOM from 'react-dom/client';
@@ -30,7 +29,7 @@ function App() {
           sectionContent = <Experience content={element.item} key={counter+=1}/>;
           break
         case "Projects":
-          sectionContent = <div><Projects content={element.item} key={counter+=1}/><ProjectCarousel content={element.item}/></div>;
+          sectionContent = <Projects content={element.item} key={counter+=1}/>;
           break
         case "Contact":
           sectionContent = <Contact content={element.item} key={counter+=1}/>;
