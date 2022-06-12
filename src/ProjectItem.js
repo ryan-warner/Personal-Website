@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 // Best strategy -- carousel with expanded item visible
 // WIth a view all button that shows the grid w/ short description, preview photo, and if selected, returns to carousel view
 
-function ExpandedProjectItem(props) {
+function ProjectItem(props) {
     const[focusedImage, setFocusedImage] = useState(props.project.images[0]);
     
     function getNextImage(images, imageIndex) {
@@ -36,14 +36,14 @@ function ExpandedProjectItem(props) {
     });
     
     return (
-        <div className="relative w-full h-72 overflow-hidden flex align-top rounded-lg py-4">
-            <div className={"relative group h-full w-2/3 overflow-hidden rounded-xl" + (props.even ? " order-1" : " order-2")}>
+        <div className="relative w-full overflow-hidden flex align-top rounded-lg py-4">
+            <div className={"relative group h-96 w-2/3 overflow-hidden rounded-md drop-shadow-lg" + (props.even ? " order-1" : " order-2")}>
                 <img className="object-cover h-full w-full absolute inset-0 object-center select-none" src={require("./images/" + focusedImage)}></img>
                 <div className="absolute left-0 flex flex-col justify-center h-full w-min">
-                    <ChevronLeftIcon onClick={() => getLastImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-25 hover:opacity-90 stroke-white"/>
+                    <ChevronLeftIcon onClick={() => getLastImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-[0.5] hover:opacity-90 stroke-white"/>
                 </div>
                 <div className="absolute right-0 flex flex-col justify-center h-full w-min">
-                    <ChevronRightIcon onClick={() => getNextImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-25 hover:opacity-90 stroke-white"/>
+                    <ChevronRightIcon onClick={() => getNextImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-[0.5] hover:opacity-90 stroke-white"/>
                 </div>
             </div>
             <div className={"w-full h-full px-4 flex flex-col flex-grow" + (props.even ? " order-2" : " order-1")}>
@@ -55,4 +55,4 @@ function ExpandedProjectItem(props) {
     );
   }
   
-  export default ExpandedProjectItem;
+  export default ProjectItem;

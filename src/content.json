@@ -92,10 +92,11 @@
                             "project": {
                                 "name": "1995 Ford Bronco",
                                 "shortDescription": "Short description",
-                                "longDescription": "Longer description",
-                                "images": ["individual.jpg", "urbanKaiLogo.png","yLogo.png"],
-                                "tags": ["soldering", "CAD", "etc"],
-                                "link": "if applicable"
+                                "longDescription": "Through most of high school I had the pleasure of sharing a 1995 Ford Bronco with my younger brother. Originally belonging to a neighbor, it had sat untouched in his driveway for years, while the elements did their work on the mechanics of the vehicle. Over the few years I've been driving the Bronco, I can't say that I've gone more than a month without something needing work, all the way from losing some of the interior trim to failures that forced be to push the car from the middle of a busy intersection. Like most vehicles, it's often less of a project than it is a complete experience, one that is incredibly frustrating as well as rewarding.",
+                                "images": ["bronco.jpeg", "headlights.jpeg", "speedo.png"],
+                                "tasks" : ["Diagnosed and corrected shift timing issues associated with a faulty speedometer", "Correction for hardware failures including belts, window motors, and dashboard structure", ""],
+                                "tags": ["Automotive Repair", "", "etc"],
+                                "link": ""
                             }
                         },
                         {

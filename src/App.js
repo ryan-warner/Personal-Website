@@ -53,7 +53,7 @@ function App() {
     <div className="h-screen w-full">
       <Header headerItems={headerContent}/>
       <Background introContent={introContent}/>
-      <div className="pt-8 px-24 w-full">
+      <div className="pt-8 px-32 w-full">
         {contentArr}
       </div>
       <Footer footerContent={footerContent}/>
