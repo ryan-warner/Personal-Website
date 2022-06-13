@@ -32,7 +32,7 @@ function ProjectItem(props) {
     var counter = 0;
 
     props.project.tags.forEach(element => {
-      tagItems.push(<p className="font-normal hover:scale-110 bg-blue-500 rounded-full py-2 px-4 text-white" key={counter+=1}>{element}</p>)
+      tagItems.push(<p className="font-normal drop-shadow-lg hover:scale-110 bg-blue-500 rounded-full py-2 px-4 text-white" key={counter+=1}>{element}</p>)
     });
     
     return (
@@ -49,7 +49,7 @@ function ProjectItem(props) {
             <div className={"w-full h-full px-4 flex flex-col flex-grow" + (props.even ? " order-2" : " order-1")}>
                 <p className="font-semibold text-2xl">{props.project.name}</p>
                 <p className="text-lg">{props.project.longDescription}</p>
-                <div className="flex mt-4 gap-2">{tagItems}</div>
+                <div className="flex flex-wrap mt-4 gap-2">{tagItems}</div>
             </div>
         </div>
     );

@@ -101,32 +101,32 @@
                         },
                         {
                             "project": {
-                                "name": "Project 2",
+                                "name": "Outdoor Deck in East Tampa",
                                 "shortDescription": "Short description",
                                 "longDescription": "Longer description",
-                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
-                                "tags": ["soldering", "CAD", "Stuff"],
-                                "link": "if applicable"
+                                "images": ["completedDeck.jpg", "emptyBackyard.jpg","framing.jpeg","framed.jpeg", "startingSurface.jpeg","finishingSurface.jpeg"],
+                                "tags": ["Woodworking", "Construction", "Project Management", "Fundraising", "Practical Design", "SWOT Analysis"],
+                                "link": ""
                             }
                         },
                         {
                             "project": {
-                                "name": "Project 3",
+                                "name": "Georgia Tech Design, Build, Fly",
                                 "shortDescription": "Short description",
                                 "longDescription": "Longer description",
-                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
-                                "tags": ["soldering", "CAD", "etc"],
-                                "link": "if applicable"
+                                "images": ["dbfSpring2022.jpeg", "sb3.jpeg","padas.jpeg", "coveringPada.jpeg"],
+                                "tags": ["Laser Cutting", "AutoCAD", "Soldering", "ArduPilot", "Aircraft Covering"],
+                                "link": ""
                             }
                         },
                         {
                             "project": {
-                                "name": "Project 4",
+                                "name": "Final Project - Engineering Design",
                                 "shortDescription": "Short description",
                                 "longDescription": "Longer description",
-                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
-                                "tags": ["soldering", "CAD", "etc"],
-                                "link": "if applicable"
+                                "images": ["neutralZoomedOutLit.jpg", "closeRender.jpg", "neutralRendered.jpg"],
+                                "tags": ["SolidWorks", "Project Management", "Collaboration", "Design for Manufacturing", "Dimensioning and Tolerancing"],
+                                "link": ""
                             }
                         },
                         {
