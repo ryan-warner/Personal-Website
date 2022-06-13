@@ -95,7 +95,7 @@
                                 "longDescription": "Through most of high school I had the pleasure of sharing a 1995 Ford Bronco with my younger brother. Originally belonging to a neighbor, it had sat untouched in his driveway for years, while the elements did their work on the mechanics of the vehicle. Over the few years I've been driving the Bronco, I can't say that I've gone more than a month without something needing work, all the way from losing some of the interior trim to failures that forced be to push the car from the middle of a busy intersection. Like most vehicles, it's often less of a project than it is a complete experience, one that is incredibly frustrating as well as rewarding.",
                                 "images": ["bronco.jpeg", "headlights.jpeg", "speedo.png"],
                                 "tasks" : ["Diagnosed and corrected shift timing issues associated with a faulty speedometer", "Correction for hardware failures including belts, window motors, and dashboard structure", ""],
-                                "tags": ["Automotive Repair", "", "etc"],
+                                "tags": ["Automotive Repair", "Sourcing Components", "System Trouleshooting" ,"Subsystem Interaction"],
                                 "link": ""
                             }
                         },
@@ -123,9 +123,9 @@
                             "project": {
                                 "name": "Final Project - Engineering Design",
                                 "shortDescription": "Short description",
-                                "longDescription": "Longer description",
+                                "longDescription": "The goal of this project was to develop and present a complex assembly with ~120 parts compiled by a team of six as well as to demonstrate a thorough understanding of 3D modeling techniques and CAD best practices. Choosing to model a standing desk with a unique scissor-lift mechanism, the desk was split into six respective subassemblies of around 20 components each. Subassemblies included the desk frame and the included raising and lowering mechanism, a modular shelving and lighting system, a modular drawer and internal storage system, and a few others. Subassemblies and the primary assembly were joined with common toolbox components or built-in attachment mechanisms, as required by the design.",
                                 "images": ["neutralZoomedOutLit.jpg", "closeRender.jpg", "neutralRendered.jpg"],
-                                "tags": ["SolidWorks", "Project Management", "Collaboration", "Design for Manufacturing", "Dimensioning and Tolerancing"],
+                                "tags": ["SolidWorks", "Project Management", "Collaboration", "Design for Manufacturing", "Dimensioning and Tolerancing", "3D Rendering"],
                                 "link": ""
                             }
                         },
@@ -133,7 +133,7 @@
                             "project": {
                                 "name": "Pneumatic Air Cannon",
                                 "shortDescription": "Short description",
-                                "longDescription": "Longer description",
+                                "longDescription": "Constructed from schedule 40 PVC and designed around a schrader valve, the cannon is conservatively designed to operate under ~150 PSI. The chamber is pressurized with either a manual bike pump or a consumer pump for sporting equipment. Pressure is released through a valve designed for automated and scheduled release of water to sprinkler lines. By modifying this valve to accommodate an air compressor blow gun attachment, the valve actuates in significantly less time, leading to a far greater impulse to the projectile. The projectile utilized in the conduct of this experiment was 3D printed at a constant height, allowing for velocity measurements with an infrared photogate placed at the end of the barrel. The photogate being used as a tool for evaluation of the cannon's performance as a function of exit velocity and chamber pressure.",
                                 "images": ["airCannon.jpeg", "cannonSetup.jpeg","cannonProjectile.jpeg"],
                                 "tags": ["Pressure Vessels", "Data Collection and Processing", "3D Printing", "Dimensioning and Tolerancing", "Experimental Design"],
                                 "link": "if applicable"
