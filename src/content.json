@@ -131,21 +131,11 @@
                         },
                         {
                             "project": {
-                                "name": "Project 5",
+                                "name": "Pneumatic Air Cannon",
                                 "shortDescription": "Short description",
                                 "longDescription": "Longer description",
-                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
-                                "tags": ["soldering", "CAD", "etc"],
-                                "link": "if applicable"
-                            }
-                        },
-                        {
-                            "project": {
-                                "name": "Project 6",
-                                "shortDescription": "Short description",
-                                "longDescription": "Longer description",
-                                "images": ["individual.jpg", "image2.jpg","image3.jpg"],
-                                "tags": ["soldering", "CAD", "etc"],
+                                "images": ["airCannon.jpeg", "cannonSetup.jpeg","cannonProjectile.jpeg"],
+                                "tags": ["Pressure Vessels", "Data Collection and Processing", "3D Printing", "Dimensioning and Tolerancing", "Experimental Design"],
                                 "link": "if applicable"
                             }
                         }
