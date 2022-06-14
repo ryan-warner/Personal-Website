@@ -5,8 +5,12 @@
                 {
                     "heading": "About", 
                     "link": "",
-                    "sectionContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo urna, eleifend sit amet metus ut, maximus scelerisque metus. Aenean hendrerit finibus tincidunt. Maecenas in velit eros. Cras aliquet libero eget arcu imperdiet finibus. Vivamus leo nulla, scelerisque at pellentesque quis, semper sit amet nibh. Phasellus id ex vestibulum sapien dictum ornare. Vivamus auctor, ante vitae pellentesque maximus, arcu leo tincidunt ante, quis lacinia est odio a turpis. Quisque vel ipsum augue. Quisque ac tristique ipsum, sed suscipit neque. Duis a orci tortor. Pellentesque tempor sem sed vulputate ornare. Fusce condimentum quam gravida semper placerat. Etiam enim magna, eleifend sit amet massa ut, venenatis eleifend lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum quam leo, vitae viverra quam dignissim a. Nunc tincidunt lorem nec mauris pulvinar, ac tempus nibh rutrum. In ac varius elit. In ligula mauris, vehicula a pharetra sed, interdum at leo. Vestibulum non eros at risus porta vestibulum. Morbi in lobortis eros. In hac habitasse platea dictumst. Vivamus ante elit, tincidunt sit amet finibus in, viverra id massa. Duis varius, sapien et posuere congue, ipsum mi tempor mi, ut vestibulum eros eros at justo. Aliquam convallis, enim a lobortis efficitur, elit erat vestibulum urna, ut consequat elit orci sed libero. Nullam ut ultricies nisl.",
-                    "photoPath": "individual.jpg",
+                    "sectionContent": [
+                        "I was born in the United Kingdom and lived right outside of London until the age of six, after which my family moved to Tampa, Florida, where I've lived until I left for Atlanta. I've always loved to make things and spent countless hours growing up working on an incredible variety of projects. From one of the first generation Raspberry Pis, I learned about how computers interact with the wider internet, spinning up web servers and tools to use day to day around the house. Later, I learned to fly RC aircraft after hours of crashing a beat up flying wing into the ground.",
+                        "As a third-year student at Georgia Tech, I've progressed through much of the Aerospace Engineering curriculum, having completed Thermo and Fluids Fundamentals, Aerodynamics, and Mechanics of Deformable Bodies to name a few. I'm involved in the Georgia Tech Design, Build, Fly Club and serve as a student advisor in a Freshman Leadership Organization on campus called Emerging Leaders.",
+                        "Outside of school, I love getting outside. I spend much of my free time running on the Beltline or in Piedmont park. I love being in Atlanta, close to music festivals, sports, and so much more. My hope is that this little website gives you something of an idea of who I am and what I get excited about. Nothing is ever comprehensive, so if you would like to have a conversation, lets connect!"
+                    ],
+                    "photoPath": "headshot.jpg",
                     "photoAlt": "Individual Photo"
                 }
             },
@@ -103,7 +107,7 @@
                             "project": {
                                 "name": "Outdoor Deck in East Tampa",
                                 "shortDescription": "Short description",
-                                "longDescription": "Longer description",
+                                "longDescription": "This project was my Eagle project for Boy Scouts, and I wanted to make sure that I wasn’t simply turning to someone else to do the hard work for me, as I had seen with other projects in the past. However, the reality of the situation was that I didn’t know how to build a deck. I was so focused on making sure that everything would come out perfectly, that I had no idea where to start. It was only in reaching out to a trusted advisor for assistance that I was able to get some sense of direction for the project. He helped me to execute upon my ideas and brought years of experience and advice to the table. I learned more about the construction process than I ever thought possible, and with his guidance, I was able to move forward. It was an experience that helped me to understand the importance of recognizing when you’re in over your head. By asking for help, I wasn’t handing over the project, I was simply admitting that I didn’t have the resources and experience necessary to create what I had envisioned. By turning to someone else, not only was I able to complete the project, the end result was far beyond anything I had previously envisioned.",
                                 "images": ["completedDeck.jpg", "emptyBackyard.jpg","framing.jpeg","framed.jpeg", "startingSurface.jpeg","finishingSurface.jpeg"],
                                 "tags": ["Woodworking", "Construction", "Project Management", "Fundraising", "Practical Design", "SWOT Analysis"],
                                 "link": ""
@@ -113,7 +117,7 @@
                             "project": {
                                 "name": "Georgia Tech Design, Build, Fly",
                                 "shortDescription": "Short description",
-                                "longDescription": "Longer description",
+                                "longDescription": "As a member of the Georgia Tech Design, Build, Fly Advanced Class team, I have played a significant number of roles. Every aircraft built is an all-hands effort, with members pitching in wherever needed in order to get the aircraft completed. I have cut ribs, covered wingtips to centerbodies, and glued my fingers together more times than I can count. Over the last year, three main aircraft were built, along with 4 smaller aircraft, called PADAs, deployed midair from the main aircraft. At this year's competition, I was responsible for piloting the PADA to the ground following a successful release from the main aircraft. Our team placed 2nd in the world, placing us in an advantageous position to iterate on as we enter this new competition cycle. The primary focus for the upcoming year will be the development of an aerial sensing system for target acquisition, integration of this system into the existing data acquisition system, and the improvement upon existing PADA vehicles.",
                                 "images": ["dbfSpring2022.jpeg", "sb3.jpeg","padas.jpeg", "coveringPada.jpeg"],
                                 "tags": ["Laser Cutting", "AutoCAD", "Soldering", "ArduPilot", "Aircraft Covering"],
                                 "link": ""
@@ -155,14 +159,14 @@
             {"item":
                 {
                     "heading": "Resume", 
-                    "filePath": ""
+                    "filePath": "Resume Spring 2022 - Revised.pdf"
                 }
             }
         ],
     "intro":
         {
             "primaryIntro": "Hi, my name is Ryan Warner!",
-            "secondaryIntro": "I'm an Aerospace Engineering student at the Georgia Institute of Technology. I'm interested in creating aerospace systems to improve the lives of people around the world."
+            "secondaryIntro": "I'm an Aerospace Engineering student at the Georgia Institute of Technology. I'm interested in using technology and engineering to solve real-world problems."
         },
     "footer":
         {
