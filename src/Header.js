@@ -5,11 +5,31 @@ function Header(props) {
   const headerItems = [];
   const pageTitleContent = {"heading": "Ryan Warner"};
 
+  var scrollFunction = null;
+
   const pageTitle = <HeaderItem item={pageTitleContent}/>;
   var counter = 0
   props.headerItems.forEach(element => {
     // Text Color must be alongside opacity for proper functionality
-    headerItems.push(<HeaderItem classProps="text-black text-opacity-70 hover:text-opacity-100" item={element.item} key={counter+=1} />)
+
+    switch (element.item.heading) {
+      case "About":
+        scrollFunction = props.aboutScroll;
+        break
+      case "Experience":
+        scrollFunction = props.experienceScroll;
+        break
+      case "Projects":
+        scrollFunction = props.projectsScroll;
+        break
+      case "Contact":
+        scrollFunction = props.contactScroll;
+        break
+      default: 
+        scrollFunction = null
+    }
+
+    headerItems.push(<HeaderItem click={scrollFunction} classProps="text-black text-opacity-70 hover:text-opacity-100" item={element.item} key={counter+=1} />)
   });
   return (
     <div className="h-16 flex justify-between w-full px-8 text-2xl font-medium items-center absolute z-10">

@@ -1,6 +1,6 @@
 import './index.css';
 import Header from './Header';
-import React from 'react';
+import React, { useRef } from 'react';
 import content from './content.json';
 import Background from './Background';
 import SectionHeader from './SectionHeader';
@@ -15,6 +15,14 @@ function App() {
   const headerContent = content.header;
   const introContent = content.intro;
   const footerContent = content.footer.links;
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const aboutScroll = () => { aboutRef.current.scrollIntoView({ behavior: 'smooth' }) };
+  const experienceScroll = () => { experienceRef.current.scrollIntoView({ behavior: 'smooth' }) };
+  const projectsScroll = () => { projectsRef.current.scrollIntoView({ behavior: 'smooth' }) };
+  const contactScroll = () => { contactRef.current.scrollIntoView({ behavior: 'smooth' }) };
 
   const contentArr = [];
   var counter = 0
@@ -39,10 +47,27 @@ function App() {
     }
 
     // Text Color must be alongside opacity for proper functionality
+    var sectionHeader = null;
     if (sectionContent != null) {
+      switch (element.item.heading) {
+        case "About":
+          sectionHeader = <SectionHeader ref={aboutRef} sectionHeading={element.item.heading} key={counter+1} />;
+          break
+        case "Experience":
+          sectionHeader = <SectionHeader ref={experienceRef} sectionHeading={element.item.heading} key={counter+1} />;
+          break
+        case "Projects":
+          sectionHeader = <SectionHeader ref={projectsRef} sectionHeading={element.item.heading} key={counter+1} />;
+          break
+        case "Contact":
+          sectionHeader = <SectionHeader ref={contactRef} sectionHeading={element.item.heading} key={counter+1} />;
+          break
+        default: 
+          sectionContent = null
+    }
       contentArr.push(
         <div className="w-full flex flex-col divide-y-2" key={counter}>
-          <SectionHeader sectionHeading={element.item.heading} key={counter+1} />
+          {sectionHeader}
           {sectionContent}
         </div>
       )
@@ -51,7 +76,7 @@ function App() {
 
   return (
     <div className="h-screen w-full">
-      <Header headerItems={headerContent}/>
+      <Header aboutScroll={aboutScroll} experienceScroll={experienceScroll} projectsScroll={projectsScroll} contactScroll={contactScroll} headerItems={headerContent}/>
       <Background introContent={introContent}/>
       <div className="pt-8 px-32 w-full">
         {contentArr}

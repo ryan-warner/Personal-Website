@@ -1,5 +1,4 @@
 import ProjectItem from "./ProjectItem"
-import React, { useState } from "react";
 
 function Projects(props) {
 

@@ -37,13 +37,15 @@ function ProjectItem(props) {
     
     return (
         <div className="relative w-full overflow-hidden flex align-top rounded-md py-4">
-            <div className={"relative group h-96 w-2/3 overflow-hidden rounded-xl drop-shadow-lg" + (props.even ? " order-1" : " order-2")}>
-                <img className="object-cover h-full w-full absolute inset-0 object-center select-none" src={require("./images/" + focusedImage)}></img>
-                <div className="absolute left-0 flex flex-col justify-center h-full w-min">
-                    <ChevronLeftIcon onClick={() => getLastImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-[0.5] hover:opacity-90 stroke-white"/>
-                </div>
-                <div className="absolute right-0 flex flex-col justify-center h-full w-min">
-                    <ChevronRightIcon onClick={() => getNextImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-[0.5] hover:opacity-90 stroke-white"/>
+            <div className={"self-stretch w-2/3" + (props.even ? " order-1" : " order-2")}>
+                <div className="relative group h-full w-full overflow-hidden rounded-xl drop-shadow-lg">
+                    <img className="object-cover h-full w-full absolute inset-0 object-center select-none" src={require("./images/" + focusedImage)}></img>
+                    <div className="absolute left-0 flex flex-col justify-center h-full w-min">
+                        <ChevronLeftIcon onClick={() => getLastImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-[0.5] hover:opacity-90 stroke-white"/>
+                    </div>
+                    <div className="absolute right-0 flex flex-col justify-center h-full w-min">
+                        <ChevronRightIcon onClick={() => getNextImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-[0.5] hover:opacity-90 stroke-white"/>
+                    </div>
                 </div>
             </div>
             <div className={"w-full h-full px-4 flex flex-col flex-grow" + (props.even ? " order-2" : " order-1")}>
