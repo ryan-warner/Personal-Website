@@ -1,6 +1,6 @@
 import './index.css';
 import Header from './Header';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import content from './content.json';
 import Background from './Background';
 import SectionHeader from './SectionHeader';
@@ -19,10 +19,15 @@ function App() {
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const aboutScroll = () => { aboutRef.current.scrollIntoView({ behavior: 'smooth' }) };
-  const experienceScroll = () => { experienceRef.current.scrollIntoView({ behavior: 'smooth' }) };
-  const projectsScroll = () => { projectsRef.current.scrollIntoView({ behavior: 'smooth' }) };
-  const contactScroll = () => { contactRef.current.scrollIntoView({ behavior: 'smooth' }) };
+  const aboutScroll = () => { aboutRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
+  const experienceScroll = () => { experienceRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
+  const projectsScroll = () => { projectsRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
+  const contactScroll = () => { contactRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
+
+  const [menuState, setMenuState] = useState(false);
+  function handleClick() {
+    setMenuState(!menuState);
+  }
 
   const contentArr = [];
   var counter = 0
@@ -76,8 +81,8 @@ function App() {
 
   return (
     <div className="h-screen w-full">
-      <Header aboutScroll={aboutScroll} experienceScroll={experienceScroll} projectsScroll={projectsScroll} contactScroll={contactScroll} headerItems={headerContent}/>
-      <Background introContent={introContent}/>
+      <Header click={handleClick} menuState={menuState} aboutScroll={aboutScroll} experienceScroll={experienceScroll} projectsScroll={projectsScroll} contactScroll={contactScroll} headerItems={headerContent}/>
+      <Background menuItems={headerContent} menuState={menuState} aboutScroll={aboutScroll} experienceScroll={experienceScroll} projectsScroll={projectsScroll} contactScroll={contactScroll} introContent={introContent}/>
       <div className="pt-8 lg:px-32 md:px-24 sm:px-16 px-4 w-full">
         {contentArr}
       </div>

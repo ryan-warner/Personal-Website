@@ -1,9 +1,12 @@
 import './index.css';
 import HeaderItem from './HeaderItem';
+import { MenuIcon } from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/outline";
 
 function Header(props) {
   const headerItems = [];
   const pageTitleContent = {"heading": "Ryan Warner"};
+  const width = window.innerWidth;
 
   var scrollFunction = null;
 
@@ -31,11 +34,12 @@ function Header(props) {
 
     headerItems.push(<HeaderItem click={scrollFunction} classProps="text-black text-opacity-70 hover:text-opacity-100" item={element.item} key={counter+=1} />)
   });
+
   return (
-    <div className="md:h-16 h-12 flex justify-between w-full md:p-8 p-4  text-2xl font-medium items-center absolute z-10">
+    <div className="h-16 flex justify-between w-full md:p-8 px-4 py-4 text-2xl font-medium items-center absolute z-10">
       {pageTitle}
-      <div className="flex md:flex-row flex-col w-auto h-full gap-4 text-xl font-light items-center">
-        {headerItems}
+      <div className="flex flex-row w-auto h-full gap-4 text-xl font-light items-center">
+        {width < 640 ? (props.menuState ? <XIcon className="h-full flex-shrink stroke-1" onClick={props.click}/> : <MenuIcon className="h-full flex-shrink stroke-1" onClick={props.click}/>) : headerItems}
       </div>
     </div>
   );
