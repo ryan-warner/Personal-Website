@@ -32,7 +32,7 @@ function ProjectItem(props) {
     var counter = 0;
 
     props.project.tags.forEach(element => {
-      tagItems.push(<p className="font-normal drop-shadow-lg hover:scale-110 bg-blue-500 rounded-full py-2 px-4 text-white" key={counter+=1}>{element}</p>)
+      tagItems.push(<p className="font-normal drop-shadow-lg bg-blue-500 rounded-full py-2 px-4 text-white" key={counter+=1}>{element}</p>)
     });
     
     return (

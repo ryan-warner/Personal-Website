@@ -12,31 +12,31 @@ function Footer(props) {
         
       switch (element.item.linkTo) {
         case "LinkedIn":
-            footerItem = <a href={element.item.url} target="_blank" rel="noreferrer"><LinkedIn /></a>
+            footerItem = <a className="absolute inset-0 m-2 flex justify-center" href={element.item.url} target="_blank" rel="noreferrer"><LinkedIn className="h-8 place-self-center"/></a>
             break
         case "Instagram":
-            footerItem = <a href={element.item.url} target="_blank" rel="noreferrer"><Instagram /></a>
+            footerItem = <a className="absolute inset-0 m-2 flex justify-center" href={element.item.url} target="_blank" rel="noreferrer"><Instagram className="h-8 place-self-center" /></a>
             break
         case "Github":
-            footerItem = <a href={element.item.url} target="_blank" rel="noreferrer"><Github /></a>
+            footerItem = <a className="absolute inset-0 m-2 flex justify-center" href={element.item.url} target="_blank" rel="noreferrer"><Github  className="h-8 place-self-center"/></a>
             break
         case "Twitter":
-            footerItem = <a href={element.item.url} target="_blank" rel="noreferrer"><Twitter /></a>
+            footerItem = <a className="absolute inset-0 m-2 flex justify-center" href={element.item.url} target="_blank" rel="noreferrer"><Twitter className="h-8 place-self-center"/></a>
             break
         default:
             footerItem = null
       }
 
       if (footerItem != null) {
-        footerItems.push(<div className="aspect-square p-2 fill-black opacity-75 hover:opacity-50" key={counter+=1}>{footerItem}</div>)
+        footerItems.push(<div className="aspect-square fill-black opacity-75 hover:opacity-50 relative" key={counter+=1}>{footerItem}</div>)
       }
       
     });
 
     return (
-        <div className="w-full h-auto py-8">
+        <div className="w-full flex flex-col justify-center h-auto py-8">
             <p className="text-center h-full font-light text-lg">Made with &#10084; in Atlanta, GA</p>
-            <div className="flex gap-2 justify-center overflow-hidde h-16 py-2">
+            <div className="flex gap-2 justify-center overflow-hidden h-16 py-2">
                {footerItems}
             </div>
       </div>

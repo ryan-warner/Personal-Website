@@ -61,7 +61,7 @@ function Background(props) {
             </div>
             <div className="bg-gradient-to-t from-white h-1/5 absolute bottom-0 inset-x-0 w-full"></div>
             
-            <div className={(props.menuState ? "opacity-0 " : "opacity-100 ") + "duration-200 absolute inset-x-0 w-[90%] h-full flex flex-col justify-center md:p-16 p-6 gap-8"}>
+            <div className={(props.menuState ? "opacity-0 " : "opacity-100 ") + "duration-200 absolute inset-x-0 md:-top-[10%] w-[90%] h-full flex flex-col justify-center md:p-16 p-6 gap-8"}>
                 <p className="text-3xl">{props.introContent.primaryIntro}</p>
                 <p className="text-xl font-light">{props.introContent.secondaryIntro}</p>
             </div>
