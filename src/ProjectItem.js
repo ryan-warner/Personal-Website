@@ -39,7 +39,7 @@ function ProjectItem(props) {
         <div className="relative w-full overflow-hidden flex align-top rounded-md py-4">
             <div className={"self-stretch w-2/3" + (props.even ? " order-1" : " order-2")}>
                 <div className="relative group h-full w-full overflow-hidden rounded-xl drop-shadow-lg">
-                    <img className="object-cover h-full w-full absolute inset-0 object-center select-none" src={require("./images/" + focusedImage)}></img>
+                    <img className="object-cover h-full w-full absolute inset-0 object-center select-none" src={require("./images/" + focusedImage)} alt="Project"></img>
                     <div className="absolute left-0 flex flex-col justify-center h-full w-min">
                         <ChevronLeftIcon onClick={() => getLastImage(props.project.images, props.project.images.indexOf(focusedImage))} className="h-10 aspect-square invisible group-hover:visible z-40 opacity-[0.5] hover:opacity-90 stroke-white"/>
                     </div>

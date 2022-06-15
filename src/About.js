@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 
 
 function About(props) {
@@ -14,11 +14,11 @@ function About(props) {
         }
     })
 
-    const [currentPhoto, setCurrentPhoto] = useState(props.content.photoPath)
-
-    function handleSlideShow() {
+    //const [currentPhoto, setCurrentPhoto] = useState(props.content.photoPath)
+    const currentPhoto = props.content.photoPath;
+    //function handleSlideShow() {
         
-    }
+    //}
 
     // should make the photos a slideshow
     return (
