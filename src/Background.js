@@ -3,15 +3,15 @@ function Background(props) {
     const interval2 = 10 + Math.round(Math.random() * 15) * 2;
     const interval3 = 10 + Math.round(Math.random() * 15) * 2;
 
-    const direction1 = Math.round(Math.random() + 1/3) === 1 ? "spin" : "spin-reverse";
-    const direction2 = Math.round(Math.random() + 1/3) === 1 ? "spin" : "spin-reverse";
-    const direction3 = Math.round(Math.random() + 1/3) === 1 ? "spin" : "spin-reverse";
+    const direction1 = Math.round(Math.random() + 1/3) === 1 ? "spin-normal" : "spin-reverse";
+    const direction2 = Math.round(Math.random() + 1/3) === 1 ? "spin-normal" : "spin-reverse";
+    const direction3 = Math.round(Math.random() + 1/3) === 1 ? "spin-normal" : "spin-reverse";
 
     return (
         <div className="h-5/6 w-full bg-transparent overflow-hidden z-0 relative">
-            <div className="absolute w-[250%] aspect-square top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 isolate mix-blend-screen">
+            <div className="absolute md:w-[250%] md:h-auto h-[250%] w-auto   aspect-square top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] isolate mix-blend-screen">
                 <div className="w-full h-full aspect-square absolute inset-0 overflow-visible z-40">
-                    <div className={"w-full h-full aspect-square relative overflow-visible origin-center animate-[" + direction1 + "_" + interval1 + "s_linear_infinite]"}>
+                    <div className={" w-full h-full aspect-square relative overflow-visible origin-center animate-[" + direction1 + "_" + interval1 + "s_linear_infinite]"}>
                         <div className="w-full h-full absolute -left-1/4 -bottom-1/4 bg-gradient-radial from-[#00ffffce] overflow-visible opacity-95 mix-blend-screen"></div>
                     </div>
                 </div>

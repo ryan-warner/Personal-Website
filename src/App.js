@@ -78,7 +78,7 @@ function App() {
     <div className="h-screen w-full">
       <Header aboutScroll={aboutScroll} experienceScroll={experienceScroll} projectsScroll={projectsScroll} contactScroll={contactScroll} headerItems={headerContent}/>
       <Background introContent={introContent}/>
-      <div className="pt-8 px-32 w-full">
+      <div className="pt-8 md:px-32 px-4 w-full">
         {contentArr}
       </div>
       <Footer footerContent={footerContent}/>

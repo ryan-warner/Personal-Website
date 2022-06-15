@@ -34,7 +34,7 @@ function Header(props) {
   return (
     <div className="h-16 flex justify-between w-full px-8 text-2xl font-medium items-center absolute z-10">
       {pageTitle}
-      <div className="flex w-auto h-full gap-4 text-xl font-light items-center">
+      <div className="flex md:flex-row flex-col w-auto h-full gap-4 text-xl font-light items-center">
         {headerItems}
       </div>
     </div>
