@@ -39,8 +39,8 @@ function Background(props) {
   });
 
     return (
-        <div className="h-5/6 w-full bg-transparent overflow-hidden z-0 relative">
-            <div className={((height * 5/6) > width ? "h-[265%] w-auto " :"w-[265%] h-auto " ) + "absolute aspect-square top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] isolate mix-blend-screen"}>
+        <div className="h-3/4 w-full bg-transparent overflow-hidden z-0 relative">
+            <div className={((height * 3/4) > width ? "h-[265%] w-auto " :"w-[265%] h-auto " ) + "absolute aspect-square top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] isolate mix-blend-screen"}>
                 <div className="w-full h-full aspect-square absolute inset-0 overflow-visible z-40">
                     <div className={" w-full h-full aspect-square relative overflow-visible origin-center animate-[" + direction1 + "_" + interval1 + "s_linear_infinite]"}>
                         <div className="w-full h-full absolute -left-1/4 -bottom-1/4 bg-gradient-radial from-[#00ffffce] overflow-visible opacity-95 mix-blend-screen"></div>
@@ -61,11 +61,11 @@ function Background(props) {
             </div>
             <div className="bg-gradient-to-t from-white h-1/5 absolute bottom-0 inset-x-0 w-full"></div>
             
-            <div className={(props.menuState ? "opacity-0 " : "opacity-100 ") + "duration-200 absolute inset-x-0 md:-top-[10%] -top-[10%] w-[90%] h-full flex flex-col justify-center md:p-16 p-6 gap-8"}>
+            <div className={(props.menuState ? "opacity-0 " : "opacity-100 ") + "duration-200 absolute inset-x-0 w-[90%] h-full flex flex-col justify-center md:p-16 p-6 gap-8"}>
                 <p className="text-3xl">{props.introContent.primaryIntro}</p>
                 <p className="text-xl font-light">{props.introContent.secondaryIntro}</p>
             </div>
-            <div className={(props.menuState ? "opacity-100" : "opacity-0 invisible") + " h-5/6 justify-center absolute z-20 transition-200 gap-4 text-2xl font-light w-full inset-x-0 flex flex-col items-center"}>{menuItems}</div>
+            <div className={(props.menuState ? "opacity-100" : "opacity-0 invisible") + " h-full justify-center absolute z-20 transition-200 gap-4 text-2xl font-light w-full inset-x-0 flex flex-col items-center"}>{menuItems}</div>
         </div>
     )
 }
