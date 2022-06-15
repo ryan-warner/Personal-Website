@@ -32,7 +32,7 @@ function Header(props) {
     headerItems.push(<HeaderItem click={scrollFunction} classProps="text-black text-opacity-70 hover:text-opacity-100" item={element.item} key={counter+=1} />)
   });
   return (
-    <div className="h-16 flex justify-between w-full px-8 text-2xl font-medium items-center absolute z-10">
+    <div className="md:h-16 h-12 flex justify-between w-full md:p-8 p-4  text-2xl font-medium items-center absolute z-10">
       {pageTitle}
       <div className="flex md:flex-row flex-col w-auto h-full gap-4 text-xl font-light items-center">
         {headerItems}

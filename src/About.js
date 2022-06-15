@@ -28,7 +28,7 @@ function About(props) {
                     {sections}
                 </div>
                 <div className="w-1/3 self-stretch">
-                <div className="relative h-full overflow-hidden rounded-lg shadow-lg -rotate-2">
+                <div className="relative h-full overflow-hidden rounded-lg shadow-lg md:-rotate-2">
                     <img className="absolute object-center w-full h-full object-cover inset-0" src={require("./images/" + currentPhoto)} alt={props.content.photoAlt}></img>
                 </div>
                 </div>
