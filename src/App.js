@@ -19,10 +19,10 @@ function App() {
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const aboutScroll = () => { aboutRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
-  const experienceScroll = () => { experienceRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
-  const projectsScroll = () => { projectsRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
-  const contactScroll = () => { contactRef.current.scrollIntoView({ behavior: 'smooth' }); handleClick() };
+  const aboutScroll = () => { aboutRef.current.scrollIntoView({ behavior: 'smooth' }); if (menuState) {handleClick()} };
+  const experienceScroll = () => { experienceRef.current.scrollIntoView({ behavior: 'smooth' }); if (menuState) {handleClick()} };
+  const projectsScroll = () => { projectsRef.current.scrollIntoView({ behavior: 'smooth' }); if (menuState) {handleClick()} };
+  const contactScroll = () => { contactRef.current.scrollIntoView({ behavior: 'smooth' }); if (menuState) {handleClick()} };
 
   const [menuState, setMenuState] = useState(false);
   function handleClick() {
