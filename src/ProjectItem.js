@@ -1,7 +1,7 @@
 import { ChevronLeftIcon } from "@heroicons/react/outline";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import ExpandToggleButton from "./ExpandToggleButton";
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 // Use State? Probably
 // import { useState } from "react";
@@ -15,9 +15,6 @@ function ProjectItem(props) {
     function handleClick() {
         setExpandedProject(!expandedProject)
     }
-
-
-    const projectRef = useRef(null);
     
     //const scrollToRef = (ref) => 
     // Infinite carousel to add
@@ -50,7 +47,7 @@ function ProjectItem(props) {
     const width = window.innerWidth
     
     return (
-        <div ref={projectRef} className={(width < 640 ? "flex-col " : "flex-row ") + "relative w-full overflow-hidden flex align-top rounded-md lg:py-4 md:py-2 gap-4"}>
+        <div className={(width < 640 ? "flex-col " : "flex-row ") + "relative w-full overflow-hidden flex align-top rounded-md lg:py-4 md:py-2 gap-4"}>
             <div className={(width < 640 ? " self-stretch aspect-square" : (props.even ? " order-1 self-stretch w-2/3" : " order-2 self-stretch w-2/3"))}>
                 <div className="relative group h-full w-full overflow-hidden rounded-xl drop-shadow-lg">
                     <img className="z-20 object-cover h-full w-full absolute inset-0 object-center select-none" src={require("./images/" + focusedImage)} alt="Project"></img>
