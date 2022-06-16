@@ -3,11 +3,6 @@ import { ChevronRightIcon } from "@heroicons/react/outline";
 import ExpandToggleButton from "./ExpandToggleButton";
 import React, { useState } from 'react';
 
-// Use State? Probably
-// import { useState } from "react";
-// Best strategy -- carousel with expanded item visible
-// WIth a view all button that shows the grid w/ short description, preview photo, and if selected, returns to carousel view
-
 function ProjectItem(props) {
     const [focusedImage, setFocusedImage] = useState(props.project.images[0]);
 
