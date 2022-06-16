@@ -21,7 +21,7 @@ function Projects(props) {
     projectItems.push(<ProjectItem click={handleClick} expanded={expandedProject} project={element.project} key={counter} even={(counter + 1) % 2 === 0} />)
   });
   return (
-    <div className="w-full h-auto flex justify-center pt-2">
+    <div className="w-full h-auto flex justify-center sm:pt-0 pt-2">
       <div className="w-full h-full md:py-4 py-2 gap-8 flex flex-col">
         {projectItems}
       </div>
