@@ -23,7 +23,7 @@ function About(props) {
     // should make the photos a slideshow
     const image = 
         <div className={"w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 aspect-[3/4] pl-2 float-right"}>
-        <div className="relative h-full overflow-hidden rounded-xl shadow-lg md:-rotate-2">
+        <div className="relative h-full overflow-hidden rounded-xl shadow-lg">
             <img className="absolute object-center w-full h-full object-cover inset-0" src={require("./images/" + currentPhoto)} alt={props.content.photoAlt}></img>
         </div>
         </div>
