@@ -21,16 +21,19 @@ function About(props) {
     //}
 
     // should make the photos a slideshow
+    const image = 
+        <div className={"w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 aspect-[3/4] pl-2 float-right"}>
+        <div className="relative h-full overflow-hidden rounded-xl shadow-lg md:-rotate-2">
+            <img className="absolute object-center w-full h-full object-cover inset-0" src={require("./images/" + currentPhoto)} alt={props.content.photoAlt}></img>
+        </div>
+        </div>
+    
     return (
         <div>
-            <div className="w-full h-min min-h-min py-4 flex gap-8">
-                <div className="w-2/3 h-min flex-col flex justify-start">
+            <div className={"w-full h-min min-h-min md:py-4 py-2"}>
+                <div className={"w-full h-min "}>
+                    {image}
                     {sections}
-                </div>
-                <div className="w-1/3 self-stretch">
-                <div className="relative h-full overflow-hidden rounded-lg shadow-lg md:-rotate-2">
-                    <img className="absolute object-center w-full h-full object-cover inset-0" src={require("./images/" + currentPhoto)} alt={props.content.photoAlt}></img>
-                </div>
                 </div>
             </div>
       </div>
