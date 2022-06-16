@@ -35,7 +35,7 @@ function Footer(props) {
 
     return (
         <div className="w-full flex flex-col justify-center h-auto py-8">
-            <p className="text-center h-full font-light text-lg">Made with &#10084; in Atlanta, GA</p>
+            <p className="text-center h-full font-normal text-lg">Made with &#10084; in Atlanta, GA</p>
             <div className="flex gap-2 justify-center overflow-hidden h-16 py-2">
                {footerItems}
             </div>

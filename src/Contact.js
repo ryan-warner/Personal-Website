@@ -6,7 +6,7 @@ import Obfuscate from "react-obfuscate";
 
 function Contact(props) {
     return (
-      <div className="w-full h-full py-4 flex flex-col gap-2">
+      <div className="w-full h-full md:py-4 py-2 flex flex-col gap-2">
         <div className="flex gap-2">
           <UserIcon className="h-6"/>
           <p className="font-light text-lg">{props.content.name}</p>

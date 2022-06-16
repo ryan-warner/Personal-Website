@@ -10,7 +10,7 @@ function Experience(props) {
   });
 
     return (
-      <div className="w-full h-full py-4">
+      <div className="w-full h-full md:py-4 py-2">
        {experienceItems}
       </div>
     );
