@@ -30,7 +30,7 @@ function About(props) {
     
     return (
         <div>
-            <div className={"w-full h-min min-h-min md:py-4 py-2"}>
+            <div className={"w-full h-min min-h-min py-4"}>
                 <div className={"w-full h-min "}>
                     {image}
                     {sections}
