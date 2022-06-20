@@ -16,4 +16,4 @@ Site built with React and hosted on Netlify. Supported by TailwindCSS and Formid
 
 ## License
 
-This project is licensed with the MIT license. Feel free to use it according to the terms of the license. 
+This project is licensed with the MIT license. 
