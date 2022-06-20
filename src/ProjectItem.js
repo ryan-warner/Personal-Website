@@ -2,6 +2,7 @@ import { ChevronLeftIcon } from "@heroicons/react/outline";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import ExpandToggleButton from "./ExpandToggleButton";
 import React, { useState, useEffect } from 'react';
+import { useSwipeable } from "react-swipeable";
 
 function ProjectItem(props) {
     const [focusedImage, setFocusedImage] = useState(props.project.images[0]);
@@ -9,6 +10,15 @@ function ProjectItem(props) {
     const [tempImage, setTempImage] = useState(props.project.images[0]);
     const [resetCarousel, setResetCarousel] = useState(false);
     const [runEffect, setRunEffect] = useState(true);
+
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: () => getNextImage(),
+        onSwipedRight: () => getLastImage()
+    },
+        {
+            preventScrollOnSwipe: true
+        }
+    )
 
     const [nextImage, setNextImage] = useState(
         (props.project.images.length === 1 ? focusedImage : props.project.images[1]));
@@ -81,7 +91,7 @@ function ProjectItem(props) {
     const width = window.innerWidth
     
     return (
-        <div className={(width < 640 ? "flex-col " : "flex-row ") + "relative w-full overflow-hidden flex align-top rounded-md lg:py-4 md:py-2 gap-4"}>
+        <div { ...swipeHandlers } className={(width < 640 ? "flex-col " : "flex-row ") + "relative w-full overflow-hidden flex align-top rounded-md lg:py-4 md:py-2 gap-4"}>
             <div className={(width < 640 ? " self-stretch aspect-square" : (props.even ? " order-1 self-stretch w-2/3" : " order-2 self-stretch w-2/3"))}>
                 <div className="relative group h-full w-full overflow-hidden rounded-xl drop-shadow-lg">
                     <img className={(navDirection === "right" && !resetCarousel ? "right-[105%] inset-y-0" : (navDirection === "left" && !resetCarousel ? "left-[105%] inset-y-0" : "inset-y-0 right-0 left-0 z-10")) + (!focusedVisible ? " duration-0 invisible" : " duration-300 visible") + " rounded-md object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + focusedImage)} alt="Project"></img>
