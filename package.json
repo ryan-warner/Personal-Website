@@ -2,6 +2,12 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Ryan Warner",
+    "email": "ryan.warner@gatech.edu",
+    "url": "https://ryanarner.app"
+  },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@testing-library/jest-dom": "^5.16.4",
