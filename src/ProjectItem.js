@@ -63,7 +63,7 @@ function ProjectItem(props) {
                     setResetCarousel(false);
                     setNavDirection("");
                     setRunEffect(true);
-                },50)
+                },150)
             },300)
         }
         
