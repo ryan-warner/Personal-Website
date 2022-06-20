@@ -13,3 +13,7 @@ It is possible that mobile devices show some artifacts of this composition when 
 ## Credits
 
 Site built with React and hosted on Netlify. Supported by TailwindCSS and Formidable Labs' react-swipable library
+
+## License
+
+This project is licensed with the MIT license. Feel free to use it according to the terms of the license. 
