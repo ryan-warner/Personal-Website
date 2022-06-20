@@ -5,9 +5,10 @@ import React, { useState, useEffect } from 'react';
 
 function ProjectItem(props) {
     const [focusedImage, setFocusedImage] = useState(props.project.images[0]);
-    const [focusedZIndex, setFocusedZIndex] = useState(0);
-    const [focusedReturn, setFocusedReturn] = useState(false);
-    const [runOnce, setRunOnce] = useState(true);
+    const [focusedVisible, setFocusedVisible] = useState(true);
+    const [tempImage, setTempImage] = useState(props.project.images[0]);
+    const [resetCarousel, setResetCarousel] = useState(false);
+    const [runEffect, setRunEffect] = useState(true);
 
     const [nextImage, setNextImage] = useState(
         (props.project.images.length === 1 ? focusedImage : props.project.images[1]));
@@ -21,60 +22,52 @@ function ProjectItem(props) {
     }
 
     useEffect(() => {
-        if (navDirection !== "" && runOnce) {
-            setRunOnce(false)
-            console.log(navDirection)
+        if (navDirection !== "" && runEffect) {
+            setRunEffect(false);
+            if (navDirection === "right") {
+                setTempImage(nextImage);
+            } else {
+                setTempImage(previousImage);
+            }
             const currentImage = focusedImage;
-            const numImages = props.project.images.length;
             const indexOfNext = props.project.images.indexOf(nextImage);
-            const indexOfPrev = props.project.images.indexOf(previousImage); 
-            const oldNavDirection = navDirection;
-            setTimeout(() => { 
-                setFocusedImage((navDirection === "right" ? nextImage : previousImage))
-                setFocusedReturn(true)
-                setTimeout(
-                    () => {
-                        setFocusedZIndex(1);
-                        setTimeout(
-                            () => {
-                                setNextImage((oldNavDirection === "right" ? (indexOfNext === numImages - 1 ? props.project.images[0] : props.project.images[indexOfNext + 1]) : currentImage))
-                                setPreviousImage((oldNavDirection === "left" ? (indexOfPrev === 0 ? props.project.images[numImages - 1] : props.project.images[indexOfPrev - 1]) : currentImage))
-                                setNavDirection("");
-                                setTimeout(() => {
-                                    setFocusedZIndex(0);
-                                    setRunOnce(true);
-                                    setFocusedReturn(false);
-                                },500)
-                            },100
-                        )
-                    },100
-                )
-            },600)
+            const indexOfPrev = props.project.images.indexOf(previousImage);
+            const numImages = props.project.images.length;
+            const imageArray = props.project.images;
+            setTimeout(() => {
+                setResetCarousel(true);
+                setFocusedVisible(false);
+                setNextImage(
+                    navDirection === "right" ? (indexOfNext === (numImages - 1) ? imageArray[0] : imageArray[indexOfNext + 1] ) : currentImage
+                );
+                setPreviousImage(
+                    navDirection === "left" ? (indexOfPrev === 0 ? imageArray[numImages - 1] : imageArray[indexOfPrev - 1]) : currentImage
+                );
+                if (navDirection === "right") {
+                    setFocusedImage(nextImage);
+                } else {
+                    setFocusedImage(previousImage);
+                }
+                setFocusedVisible(true);
+                setTimeout(() => {
+                    setResetCarousel(false);
+                    setNavDirection("");
+                    setRunEffect(true);
+                },50)
+            },300)
         }
         
-    }, [navDirection, focusedImage, nextImage, previousImage, props.project.images, runOnce])
+    }, [navDirection, focusedImage, nextImage, previousImage, tempImage, props.project.images, runEffect])
     
-    function getNextImage(images, imageIndex) {
-        if (navDirection === "") {
-            setNavDirection("right")
-            if (imageIndex === images.length - 1) {
-                imageIndex = 0
-            } else {
-                imageIndex+=1
-            }
-            //setFocusedImage(images[imageIndex]);
-        }  
+    function getNextImage() {
+        if (runEffect) {
+            setNavDirection("right");
+        }
     }
 
-    function getLastImage(images, imageIndex) {
-        if (navDirection === "") {
-            setNavDirection("left")
-            if (imageIndex === 0) {
-                imageIndex = images.length - 1
-            } else {
-                imageIndex-=1
-            }
-            //setFocusedImage(images[imageIndex])
+    function getLastImage() {
+        if (runEffect) {
+            setNavDirection("left");
         }
     }
 
@@ -91,14 +84,15 @@ function ProjectItem(props) {
         <div className={(width < 640 ? "flex-col " : "flex-row ") + "relative w-full overflow-hidden flex align-top rounded-md lg:py-4 md:py-2 gap-4"}>
             <div className={(width < 640 ? " self-stretch aspect-square" : (props.even ? " order-1 self-stretch w-2/3" : " order-2 self-stretch w-2/3"))}>
                 <div className="relative group h-full w-full overflow-hidden rounded-xl drop-shadow-lg">
-                    <img className={(navDirection === "right" && !focusedReturn ? "right-[105%] inset-y-0 duration-500" : (navDirection === "left" && !focusedReturn ? "left-[105%] inset-y-0 duration-500" : "inset-y-0 right-0 left-0 duration-0")) + (focusedZIndex === 1 ? " z-40" : " z-20") + " rounded-md object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + focusedImage)} alt="Project"></img>
-                    <img className={(navDirection === "left" ? "right-0 z-30 opacity-0 duration-500" : "right-[105%] z-10 duration-0") + " opacity-100 inset-y-0 object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + previousImage)} alt="Project"></img>
-                    <img className={(navDirection === "right" ? "left-0 z-30 opacity-0 duration-500" : "left-[105%] z-10 duration-0") + " opacity-100 inset-y-0 object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + nextImage)} alt="Project"></img>
+                    <img className={(navDirection === "right" && !resetCarousel ? "right-[105%] inset-y-0" : (navDirection === "left" && !resetCarousel ? "left-[105%] inset-y-0" : "inset-y-0 right-0 left-0 z-10")) + (!focusedVisible ? " duration-0 invisible" : " duration-300 visible") + " rounded-md object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + focusedImage)} alt="Project"></img>
+                    <img className={(navDirection === "left" && !resetCarousel? "right-0 opacity-0" : "right-[105%]") + (resetCarousel ? " duration-0 invisible " : " duration-300 visible") + " z-10 opacity-100 inset-y-0 object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + previousImage)} alt="Project"></img>
+                    <img className={(navDirection === "right" && !resetCarousel ? "left-0 opacity-0" : "left-[105%]") + (resetCarousel ? " duration-0 invisible " : " duration-300 visible") + " z-10 opacity-100 inset-y-0 object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + nextImage)} alt="Project"></img>
+                    <img className={(resetCarousel ? "visible" : "invisible" ) +  " inset-y-0 right-0 left-0 duration-0 z-50 rounded-md object-cover h-full w-full absolute object-center select-none"} src={require("./images/" + tempImage)} alt="Project"></img>
                     <div className="absolute left-0 flex flex-col justify-center h-full w-min">
-                        <ChevronLeftIcon onClick={() => getLastImage(props.project.images, props.project.images.indexOf(focusedImage))} className={"h-10 aspect-square z-50 opacity-[0.5] hover:opacity-90 stroke-white visible"}/>
+                        <ChevronLeftIcon onClick={() => getLastImage()} className={"h-10 aspect-square z-50 opacity-[0.5] hover:opacity-90 stroke-white visible"}/>
                     </div>
                     <div className="absolute right-0 flex flex-col justify-center h-full w-min">
-                        <ChevronRightIcon onClick={() => getNextImage(props.project.images, props.project.images.indexOf(focusedImage))} className={"h-10 aspect-square z-50 opacity-[0.5] hover:opacity-90 stroke-white visible"}/>
+                        <ChevronRightIcon onClick={() => getNextImage()} className={"h-10 aspect-square z-50 opacity-[0.5] hover:opacity-90 stroke-white visible"}/>
                     </div>
                 </div>
             </div>
