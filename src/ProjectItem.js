@@ -58,13 +58,17 @@ function ProjectItem(props) {
                 } else {
                     setFocusedImage(previousImage);
                 }
-                setFocusedVisible(true);
+                setTimeout(
+                    () => {
+                        setFocusedVisible(true);
+                    },100
+                )
                 setTimeout(() => {
                     setResetCarousel(false);
                     setNavDirection("");
                     setRunEffect(true);
                 },150)
-            },300)
+            },350)
         }
         
     }, [navDirection, focusedImage, nextImage, previousImage, tempImage, props.project.images, runEffect])
