@@ -67,7 +67,7 @@ function ProjectItem(props) {
                     setResetCarousel(false);
                     setNavDirection("");
                     setRunEffect(true);
-                },150)
+                },250)
             },350)
         }
         
