@@ -66,8 +66,11 @@ function ProjectItem(props) {
                 setTimeout(() => {
                     setResetCarousel(false);
                     setNavDirection("");
-                    setRunEffect(true);
-                },250)
+                    setTimeout(
+                        () => {setRunEffect(true);},
+                        50
+                    )
+                },150)
             },350)
         }
         
