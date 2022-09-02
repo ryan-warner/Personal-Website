@@ -125,6 +125,16 @@
                         },
                         {
                             "project": {
+                                "name": "Assorted Development Projects",
+                                "shortDescription": "Short description",
+                                "longDescription": "Over the summer of 2022, I had the opportunity to spend a little over two months in France. During this time, I was able to travel, but while we weren't traveling, I had a chance to build some things that I had been working on for a while. These projects are in varying states of completion, but I'm pleased with the progress I've made and wanted to share them here. Filmstrip is a fullstack web app designed to make it easier to share and store film photos. I would like to build it into a tool that can be used to connect hobbyist photographers like me to the film labs they develop with. I also recreated the GitHub globe using ThreeJS and React Three Fiber, as a first step in a project where I would like to visualize and store data about the flights an indiviual has taken over their lifetime.",
+                                "images": ["filmstrip.png", "globe.png","tables.png"],
+                                "tags": ["ReactJS", "Python", "Flask", "MySQL", "SQLAlchemy", "Relational Databases", "Git", "TailwindCSS", "ThreeJS", "React Three Fiber", "Responsive Design", "Frontend Development", "Backend Development"],
+                                "link": ""
+                            }
+                        },
+                        {
+                            "project": {
                                 "name": "Final Project - Engineering Design",
                                 "shortDescription": "Short description",
                                 "longDescription": "The goal of this project was to develop and present a complex assembly with ~120 parts compiled by a team of six as well as to demonstrate a thorough understanding of 3D modeling techniques and CAD best practices. Choosing to model a standing desk with a unique scissor-lift mechanism, the desk was split into six respective subassemblies of around 20 components each. Subassemblies included the desk frame and the included raising and lowering mechanism, a modular shelving and lighting system, a modular drawer and internal storage system, and a few others. Subassemblies and the primary assembly were joined with common toolbox components or built-in attachment mechanisms, as required by the design.",
