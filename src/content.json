@@ -27,12 +27,12 @@
                                 "jobTitle": "Technology Intern",
                                 "start": "May 2021",
                                 "end": "May 2022",
-                                "description": "Working alongside the WestRock Corporate Tax team to develop internal tools to smooth the tax process. Tools are built with the Microsoft Power Platform, primarily utilizing PowerApps as a front-end interface, PowerAutomate for data processing, and Microsoft Dataverse as a back-end.",
+                                "description": "Worked alongside the WestRock Corporate Tax team to develop internal tools to smooth the tax process. Tools were built on the Microsoft Power Platform, primarily utilizing PowerApps as a front-end interface, PowerAutomate for data processing, and Microsoft Dataverse as a back-end.",
                                 "bullets": 
                                     [
                                         "Developed a system to streamline department-wide task management and create a centralized tax workflow at a savings of $250,000 from an external vendor",
-                                        "Building and implementing custom connectors to access and modify data from external tools such as Thomson Reuters ONESOURCE and Alteryx",
-                                        "Continuing to develop and implement systems to process department-scale data to aid and inform executive decision making"
+                                        "Built and implemented custom connectors to access and modify data from external tools such as Thomson Reuters ONESOURCE and Alteryx",
+                                        "Developed and implemented systems to process and analyze performance data and inform executive decision making"
                                     ],
                                 "imagePath": "wrkLogo.png"
                             }
