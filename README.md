@@ -1,19 +1,53 @@
-# Personal Website
+# Astro Starter Kit: Minimal
 
-A quick personal website for use with job applications, LinkedIn, and to generally represent myself online. 
+```
+npm create astro@latest -- --template minimal
+```
 
-Content is represented in a JSON, split out and passed as props in the respective react components for each section. 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-## Site Header
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-Site header is made up of three layered gradients that rotate at random intervals and directions for each load of the page. The effect is an attempt to mimic a physical effect I saw online a few months back where gradients on glass cylinders were laid atop one another. 
+## 🚀 Project Structure
 
-It is possible that mobile devices show some artifacts of this composition when scrolling quickly to the top of the page. 
+Inside of your Astro project, you'll see the following folders and files:
 
-## Credits
+```
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-Site built with React and hosted on Netlify. Supported by TailwindCSS and Formidable Labs' react-swipable library
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## License
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-This project is licensed with the MIT license. 
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:3000`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+We should check with the plane to see if it has exited the scene NOT check in contrails. 
+Forcing funciton, if few planes, more likely for a y position closer to 0, similarly, think about angle...
+Might need to force to spawn later
+OR we flip flop above and below.. honestly I like this a lot better

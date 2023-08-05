@@ -1,0 +1,7 @@
+---
+const { icon, url, alt, order } = Astro.props;
+const svg = await import(`../assets/${icon}.svg?raw`);
+---
+<a href={url} style={{order: order}} target="_blank" class="fill-gray-200 hover:fill-gray-300 h-8 aspect-square">
+    <Fragment set:html={svg.default} />
+</a>

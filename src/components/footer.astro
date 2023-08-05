@@ -1,0 +1,14 @@
+---
+import FooterElement from "./footerElement.astro";
+import content from "../content";
+---
+<div class="flex flex-col gap-4 items-center text-white text-lg select-none py-12"> 
+    <div>{`Made with \u2764\uFE0E in Atlanta, GA`}</div>
+    <div class="w-full h-12 flex justify-center items-center gap-8">
+        {
+            content.footer.map((item) => (
+                <FooterElement {...item} />
+            ))
+        }
+    </div>
+</div>

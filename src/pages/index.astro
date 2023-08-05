@@ -1,0 +1,48 @@
+---
+// Component Imports
+
+// import astro component
+import Splash from "@components/splash.astro";
+import Footer from "@components/footer.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<script type="module" src="./src/three/main.js"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+		<title>Astro</title>
+		<style type="text/css">
+			body::-webkit-scrollbar {
+				width: 18px;
+			}
+			body::-webkit-scrollbar-track {
+  				background: #2f333d;
+			}
+			body::-webkit-scrollbar-thumb {
+  				background: white;
+				border-radius: 9px;
+				background-clip: content-box;
+				border: 6px solid transparent;
+			}
+			body {
+				background-color: #2f333d;
+			}
+		</style>
+	</head>
+	<body class="font-roboto-mono relative text-white">
+		<div id="splash" class="w-full h-[80vh] relative">
+			<div class="inset-0 absolute flex flex-col gap-6 justify-center px-[10%]">
+				<div id="splash-text-primary" class="text-6xl font-semibold w-max [text-shadow:_-6px_12px_12px_rgb(0_0_0_/_80%)]">Hi, I'm Ryan</div>
+				<div id="splash-text-secondary" class="text-3xl w-max [text-shadow:_-6px_8px_12px_rgb(0_0_0_/_80%)]">I like to make things.</div>
+			</div>
+		</div>
+		<div class="h-[200vh] bg-[#2f333d] text-white text-xs font-roboto-mono">Sometimes I make things that fly</div>
+		<Footer />
+	</body>
+</html>
