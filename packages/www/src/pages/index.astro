@@ -1,0 +1,89 @@
+---
+import "../styles/main.css";
+// Light
+//#EFE6DD
+
+// Dark
+//#40424F
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ryan Warner</title>
+  </head>
+  <body
+    class="font-mono flex flex-col min-h-screen px-12 min-w-full select-none bg-[EFE6DD] text-black pt-[15%]"
+  >
+    <div class="flex flex-col gap-14">
+      <div class="flex flex-col gap-4">
+        <div class="text-5xl">Ryan Warner</div>
+        <div class="opacity-50">I write software for things that fly</div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          <div class="text-xl">{`\u00bb About`}</div>
+          <div class="flex flex-col opacity-50 w-2/3">
+            <div>Located in Atlanta, GA</div>
+            <div>Currently into running, live music, and driving stick</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <div class="text-xl">{`\u00bb Work`}</div>
+          <div class="flex align-middle gap-[0.75em]">
+            <div class="opacity-50">Uncrewed and Advanced Aviation @</div>
+            <a
+              href="https://foreflight.com"
+              target="_blank"
+              class="opacity-50 duration-500 hover:underline">ForeFlight</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="text-xl">{`\u00bb Socials`}</div>
+          <div class="flex flex-row gap-2">
+            <a
+              href="https://github.com/ryan-warner"
+              target="_blank"
+              class="duration-500 hover:underline opacity-50"
+            >
+              GitHub
+            </a>
+            <div class="opacity-50">/</div>
+            <a
+              href="https://linkedin.com/in/warner-ryan"
+              target="_blank"
+              class="duration-500 hover:underline opacity-50"
+            >
+              LinkedIn
+            </a>
+            <div class="opacity-50">/</div>
+            <a
+              href="https://strava.com/athletes/ryanwarner"
+              target="_blank"
+              class="duration-500 hover:underline opacity-50"
+            >
+              Strava
+            </a>
+            <div class="opacity-50">/</div>
+            <a
+              href="https://i.airbuds.fm/ryan.warner"
+              target="_blank"
+              class="duration-500 hover:underline opacity-50"
+            >
+              Airbuds
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
