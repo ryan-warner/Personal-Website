@@ -1,10 +1,5 @@
 ---
 import "../styles/main.css";
-// Light
-//#EFE6DD
-
-// Dark
-//#40424F
 ---
 
 <html lang="en">
@@ -18,9 +13,56 @@ import "../styles/main.css";
     <meta name="generator" content={Astro.generator} />
     <title>Ryan Warner</title>
   </head>
+  <script>
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const currentTheme = localStorage.getItem("theme");
+    const setLight = document.getElementById("setLight");
+    const setDark = document.getElementById("setDark");
+    const lightBg = "#EFE6DD";
+    const darkBg = "#40424F";
+
+    if (!setLight || !setDark) {
+      throw new Error("Could not find setLight or setDark element");
+    }
+
+    if (currentTheme) {
+      document.body.style.backgroundColor =
+        currentTheme === "dark" ? darkBg : lightBg;
+      document.body.style.color = currentTheme === "dark" ? "white" : "black";
+      if (currentTheme === "dark") {
+        setDark.style.textDecoration = "underline";
+      } else {
+        setLight.style.textDecoration = "underline";
+      }
+    }
+
+    // Add transition after initial render
+    setTimeout(() => {
+      document.body.style.transitionDuration = "0.4s";
+    }, 100);
+
+    const handleClick = (e: MouseEvent) => {
+      const mode =
+        (e.target as HTMLButtonElement).id === "setLight" ? "light" : "dark";
+      document.body.style.backgroundColor = mode === "dark" ? darkBg : lightBg;
+      document.body.style.color = mode === "dark" ? "white" : "black";
+      setLight.style.textDecoration = mode === "light" ? "underline" : "none";
+      setDark.style.textDecoration = mode === "dark" ? "underline" : "none";
+      localStorage.setItem("theme", mode);
+    };
+
+    // Add event listeners
+    setLight.addEventListener("click", handleClick);
+    setDark.addEventListener("click", handleClick);
+  </script>
   <body
-    class="font-mono flex flex-col min-h-screen px-12 min-w-full select-none bg-[EFE6DD] text-black pt-[15%]"
+    class="font-mono flex flex-col min-h-screen px-12 min-w-full select-none pt-[15%] bg-[#EFE6DD] dark:bg-[#40424F] text-black dark:text-white"
   >
+    <div class="absolute top-0 right-0 mx-8 mt-4 flex flex-row align-middle">
+      <button class="hover:underline" id="setLight">Light</button>
+      <div class="mx-2">/</div>
+      <button class="hover:underline" id="setDark">Dark</button>
+    </div>
     <div class="flex flex-col gap-14">
       <div class="flex flex-col gap-4">
         <div class="text-5xl">Ryan Warner</div>
@@ -43,7 +85,7 @@ import "../styles/main.css";
             <a
               href="https://foreflight.com"
               target="_blank"
-              class="opacity-50 duration-500 hover:underline">ForeFlight</a
+              class="opacity-50 hover:underline">ForeFlight</a
             >
           </div>
         </div>
@@ -53,7 +95,7 @@ import "../styles/main.css";
             <a
               href="https://github.com/ryan-warner"
               target="_blank"
-              class="duration-500 hover:underline opacity-50"
+              class="hover:underline opacity-50"
             >
               GitHub
             </a>
@@ -61,7 +103,7 @@ import "../styles/main.css";
             <a
               href="https://linkedin.com/in/warner-ryan"
               target="_blank"
-              class="duration-500 hover:underline opacity-50"
+              class="hover:underline opacity-50"
             >
               LinkedIn
             </a>
@@ -69,7 +111,7 @@ import "../styles/main.css";
             <a
               href="https://strava.com/athletes/ryanwarner"
               target="_blank"
-              class="duration-500 hover:underline opacity-50"
+              class="hover:underline opacity-50"
             >
               Strava
             </a>
@@ -77,7 +119,7 @@ import "../styles/main.css";
             <a
               href="https://i.airbuds.fm/ryan.warner"
               target="_blank"
-              class="duration-500 hover:underline opacity-50"
+              class="hover:underline opacity-50"
             >
               Airbuds
             </a>
