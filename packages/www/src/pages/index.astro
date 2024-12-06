@@ -56,7 +56,7 @@ import "../styles/main.css";
     setDark.addEventListener("click", handleClick);
   </script>
   <body
-    class="font-mono flex flex-col min-h-screen px-12 min-w-full select-none pt-[15%] bg-[#EFE6DD] dark:bg-[#40424F] text-black dark:text-white"
+    class="font-mono flex flex-col min-h-dvh px-4 md:px-12 min-w-full select-none md:pt-[15%] pt-[25%] bg-[#EFE6DD] dark:bg-[#40424F] text-black dark:text-white"
   >
     <div class="absolute top-0 right-0 mx-8 mt-4 flex flex-row align-middle">
       <button class="hover:underline" id="setLight">Light</button>
@@ -66,13 +66,15 @@ import "../styles/main.css";
     <div class="flex flex-col gap-14">
       <div class="flex flex-col gap-4">
         <div class="text-5xl">Ryan Warner</div>
-        <div class="opacity-50">I write software for things that fly</div>
+        <div class="opacity-50 w-2/3 md:w-full">
+          I write software for things that fly
+        </div>
       </div>
 
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-2">
           <div class="text-xl">{`\u00bb About`}</div>
-          <div class="flex flex-col opacity-50 w-2/3">
+          <div class="flex flex-col opacity-50 w-4/5 md:w-full">
             <div>Located in Atlanta, GA</div>
             <div>Currently into running, live music, and driving stick</div>
           </div>
@@ -80,13 +82,14 @@ import "../styles/main.css";
 
         <div class="flex flex-col gap-2">
           <div class="text-xl">{`\u00bb Work`}</div>
-          <div class="flex align-middle gap-[0.75em]">
-            <div class="opacity-50">Uncrewed and Advanced Aviation @</div>
-            <a
-              href="https://foreflight.com"
-              target="_blank"
-              class="opacity-50 hover:underline">ForeFlight</a
-            >
+          <div class="flex">
+            <div class="opacity-50 w-2/3 md:w-full">
+              Uncrewed and Advanced Aviation @ <a
+                href="https://foreflight.com"
+                target="_blank"
+                class="hover:underline">ForeFlight</a
+              >
+            </div>
           </div>
         </div>
         <div class="flex flex-col gap-2">
