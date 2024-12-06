@@ -45,6 +45,24 @@ export default $config({
       plan: "free",
     });
 
+    const secondaryZone = new cloudflare.Zone("secondaryZone", {
+      zone: "ryanwarner.app",
+      accountId: process.env.CLOUDFLARE_DEFAULT_ACCOUNT_ID || "",
+      plan: "free",
+    });
+
+    // Redirect secondary domain to primary domain
+    new cloudflare.PageRule("pageRule", {
+      zoneId: secondaryZone.id,
+      target: secondaryZone.zone,
+      actions: {
+        forwardingUrl: {
+          url: `https://ryanwarner.xyz`,
+          statusCode: 301,
+        },
+      },
+    });
+
     const dnssec = new cloudflare.ZoneDnssec("siteDnssec", {
       zoneId: zone.id,
     });
